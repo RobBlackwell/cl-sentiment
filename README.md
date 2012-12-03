@@ -5,7 +5,7 @@ cl-sentiment is a Common Lisp library that uses the AFINN-111 wordlist to perfor
 
 Inspired by https://github.com/thisandagain/sentiment
 
-The AFINN word list is by Finn Årup Nielsen available from http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010
+The AFINN word list is by Finn Arup Nielsen available from http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010
 
 You might also like to read his paper:
 
