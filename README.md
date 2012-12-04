@@ -3,7 +3,7 @@ cl-sentiment
 
 cl-sentiment is a Common Lisp library that uses the AFINN-111 wordlist to perform sentiment analysis on arbitrary text.
 
-Inspired by https://github.com/thisandagain/sentiment
+Inspired by https://github.com/thisandagain/sentiment, it's particularly suited to looking at Twitter tweets.
 
 The AFINN word list is by Finn Arup Nielsen available from http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010
 
@@ -18,15 +18,24 @@ The AFINN files are copyright protected and distributed under
 the terms of the Open Database License (ODbL) v1.0,
 http://www.opendatacommons.org/licenses/odbl/1.0/
 
+cl-sentiment isn't yet distributed via quicklisp, but if you copy the directory to your ~/quicklisp/local-projects/ directory
+then it's easy to use quicklisp to load it.
+
+Use initialize to initialize cl-sentiment with the default sentiment word scores.
+
+Call sentiment with some arbitrary text and it returns two values - the sentiment score and the comparative sentiment score.
+
 Example
 -------
 
-	(ql:quickload "cl-sentiment")
-
-	(cl-sentiment:initialize)
-
-	(cl-sentiment:sentiment "foo bar")
-
+	CL-USER> (ql:quickload "cl-sentiment")
+	...
+	CL-USER> (cl-sentiment:initialize)
+	#<HASH-TABLE :TEST EQUAL :COUNT 2477 {1003A54463}>
+	CL-USER> (cl-sentiment:sentiment "Cats are totally amazing!")
+	4
+	1
+	CL-USER> 
 
 Rob Blackwell
 

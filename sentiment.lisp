@@ -21,7 +21,7 @@ tokenization."
 	  (setf (gethash (first s) x) (read-from-string (second s))))))
     x))
 
-(defun initialize (&optional (filename "AFINN-111.txt"))
+(defun initialize (&optional (filename (merge-pathnames (asdf:system-source-directory :cl-sentiment) "AFINN-111.txt")))
   "Initializes cl-sentiment with a default word-score table."
   (setf *word-scores* (load-word-scores filename)))
 
