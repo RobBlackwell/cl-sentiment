@@ -1,29 +1,35 @@
 cl-sentiment
 ============
 
-cl-sentiment is a Common Lisp library that uses the AFINN-111 wordlist to perform sentiment analysis on arbitrary text.
+cl-sentiment is a Common Lisp library that uses the AFINN-111 word list
+to perform sentiment analysis on arbitrary text.
 
-Inspired by https://github.com/thisandagain/sentiment, it's particularly suited to looking at Twitter tweets.
+Inspired by https://github.com/thisandagain/sentiment, it's
+particularly suited to looking at Twitter tweets.
 
-The AFINN word list is by Finn Arup Nielsen available from http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010
+The AFINN word list is by Finn Arup Nielsen available from
+http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010
 
 You might also like to read his paper:
 
-"A new ANEW: Evaluation of a word list for sentiment analysis in microblogs",
-Proceedings of the ESWC2011 Workshop on 'Making Sense of Microposts':
-Big things come in small packages 718 in CEUR Workshop Proceedings : 93-98. 2011 May. 
-http://arxiv.org/abs/1103.2903
+"A new ANEW: Evaluation of a word list for sentiment analysis in
+microblogs", Proceedings of the ESWC2011 Workshop on 'Making Sense of
+Microposts': Big things come in small packages 718 in CEUR Workshop
+Proceedings : 93-98. 2011 May.  http://arxiv.org/abs/1103.2903
 
-The AFINN files are copyright protected and distributed under
-the terms of the Open Database License (ODbL) v1.0,
+The AFINN files are copyright protected and distributed under the
+terms of the Open Database License (ODbL) v1.0,
 http://www.opendatacommons.org/licenses/odbl/1.0/
 
-cl-sentiment isn't yet distributed via quicklisp, but if you copy the directory to your ~/quicklisp/local-projects/ directory
-then it's easy to use quicklisp to load it.
+cl-sentiment is now available via Quicklisp.
 
-Use initialize to initialize cl-sentiment with the default sentiment word scores.
+Use initialize to initialize cl-sentiment with the default sentiment
+word scores.
 
-Call sentiment with some arbitrary text and it returns two values - the sentiment score and the comparative sentiment score.
+Call sentiment with some arbitrary text and it returns two values -
+the sentiment score and the comparative sentiment score. Positive
+values convey positive sentiment; negative values convey negative
+sentiment.
 
 Example
 -------
